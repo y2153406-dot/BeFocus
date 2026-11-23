@@ -1,0 +1,31 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.*
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Node.js
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Electron
+out/
+release/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

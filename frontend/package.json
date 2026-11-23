@@ -1,0 +1,22 @@
+
+{
+  "name": "befocus",
+  "version": "1.0.0",
+  "description": "A desktop productivity application built with Electron.",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "productivity",
+    "stopwatch",
+    "timer",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^45.3.2"
+  }
+}
