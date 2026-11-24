@@ -1,0 +1,230 @@
+[
+    {
+        "id": "scenic-Anime Sunset Beneath Cherry Blossoms.png",
+        "name": "Anime Sunset Beneath Cherry Blossoms",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Anime%20Sunset%20Beneath%20Cherry%20Blossoms.png"
+    },
+    {
+        "id": "scenic-Anime Sunset Serenity by the Mountains-1.png",
+        "name": "Anime Sunset Serenity by the Mountains-1",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Anime%20Sunset%20Serenity%20by%20the%20Mountains-1.png"
+    },
+    {
+        "id": "scenic-Autumn Sunset Reverie by the River-2.png",
+        "name": "Autumn Sunset Reverie by the River-2",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Autumn%20Sunset%20Reverie%20by%20the%20River-2.png"
+    },
+    {
+        "id": "scenic-Lantern-Lit Cherry Blossom Valley-2.png",
+        "name": "Lantern-Lit Cherry Blossom Valley-2",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Lantern-Lit%20Cherry%20Blossom%20Valley-2.png"
+    },
+    {
+        "id": "scenic-Sunset Blossoms at the Seaside Station-3.png",
+        "name": "Sunset Blossoms at the Seaside Station-3",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Sunset%20Blossoms%20at%20the%20Seaside%20Station-3.png"
+    },
+    {
+        "id": "scenic-Sunset Cherry Blossom Coastal Station-3.png",
+        "name": "Sunset Cherry Blossom Coastal Station-3",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/Sunset%20Cherry%20Blossom%20Coastal%20Station-3.png"
+    },
+    {
+        "id": "scenic-forest.png",
+        "name": "forest",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/forest.png"
+    },
+    {
+        "id": "scenic-mountain.png",
+        "name": "mountain",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/mountain.png"
+    },
+    {
+        "id": "scenic-ocean.png",
+        "name": "ocean",
+        "category": "scenic",
+        "src": "./assets/wallpapers/scenic/ocean.png"
+    },
+    {
+        "id": "animated-Anime Sunset Serenity by the Mountains-1 (1).png",
+        "name": "Anime Sunset Serenity by the Mountains-1 (1)",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Anime%20Sunset%20Serenity%20by%20the%20Mountains-1%20%281%29.png"
+    },
+    {
+        "id": "animated-Anime Twilight Retreat with Mountain Views.png",
+        "name": "Anime Twilight Retreat with Mountain Views",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Anime%20Twilight%20Retreat%20with%20Mountain%20Views.png"
+    },
+    {
+        "id": "animated-Cherry Blossom Pagoda Sunset Lake-1.png",
+        "name": "Cherry Blossom Pagoda Sunset Lake-1",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Cherry%20Blossom%20Pagoda%20Sunset%20Lake-1.png"
+    },
+    {
+        "id": "animated-Lantern-Lit Cherry Blossom Valley-2 (1).png",
+        "name": "Lantern-Lit Cherry Blossom Valley-2 (1)",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Lantern-Lit%20Cherry%20Blossom%20Valley-2%20%281%29.png"
+    },
+    {
+        "id": "animated-Moonlit Warrior Beneath Cherry Blossoms-3.png",
+        "name": "Moonlit Warrior Beneath Cherry Blossoms-3",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Moonlit%20Warrior%20Beneath%20Cherry%20Blossoms-3.png"
+    },
+    {
+        "id": "animated-Neon Rain Cyberpunk Rider-2.png",
+        "name": "Neon Rain Cyberpunk Rider-2",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Neon%20Rain%20Cyberpunk%20Rider-2.png"
+    },
+    {
+        "id": "animated-Neon Rooftop Under a Purple Moon-1.png",
+        "name": "Neon Rooftop Under a Purple Moon-1",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Neon%20Rooftop%20Under%20a%20Purple%20Moon-1.png"
+    },
+    {
+        "id": "animated-Sunset Blossoms at the Seaside Station-3 (1).png",
+        "name": "Sunset Blossoms at the Seaside Station-3 (1)",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/Sunset%20Blossoms%20at%20the%20Seaside%20Station-3%20%281%29.png"
+    },
+    {
+        "id": "animated-anime-dragon-enchantment-in-green-aesthetic-backiee-5K.jpg",
+        "name": "anime-dragon-enchantment-in-green-aesthetic-backiee-5K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/anime-dragon-enchantment-in-green-aesthetic-backiee-5K.jpg"
+    },
+    {
+        "id": "animated-anime-office-with-sunset-view-backiee-4K.jpg",
+        "name": "anime-office-with-sunset-view-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/anime-office-with-sunset-view-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-brooklyn-bridge-under-the-blue-clouds-backiee-8K.jpg",
+        "name": "brooklyn-bridge-under-the-blue-clouds-backiee-8K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/brooklyn-bridge-under-the-blue-clouds-backiee-8K.jpg"
+    },
+    {
+        "id": "animated-crimson-foliage-by-oriental-pagoda-backiee-HD.jpg",
+        "name": "crimson-foliage-by-oriental-pagoda-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/crimson-foliage-by-oriental-pagoda-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-crimson-gaze-into-the-anime-eye-backiee-HD.jpg",
+        "name": "crimson-gaze-into-the-anime-eye-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/crimson-gaze-into-the-anime-eye-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-enigmatic-gaze-in-monochrome-ai-art-backiee-HD.jpg",
+        "name": "enigmatic-gaze-in-monochrome-ai-art-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/enigmatic-gaze-in-monochrome-ai-art-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-gaming-above-the-earth-backiee-HD.jpg",
+        "name": "gaming-above-the-earth-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/gaming-above-the-earth-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-girl-in-hoodie-backiee-4K.jpg",
+        "name": "girl-in-hoodie-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/girl-in-hoodie-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-horizon-backiee-HD.jpg",
+        "name": "horizon-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/horizon-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-lo-fi-cafe-backiee-4K.jpg",
+        "name": "lo-fi-cafe-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/lo-fi-cafe-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-lofi-anime-blue-backiee-HD.jpg",
+        "name": "lofi-anime-blue-backiee-HD",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/lofi-anime-blue-backiee-HD.jpg"
+    },
+    {
+        "id": "animated-midnight-cityscape-and-mystical-beauty-backiee-8K.jpg",
+        "name": "midnight-cityscape-and-mystical-beauty-backiee-8K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/midnight-cityscape-and-mystical-beauty-backiee-8K.jpg"
+    },
+    {
+        "id": "animated-mountain-village-dreamscape-in-vivid-colors-backiee-5K.jpg",
+        "name": "mountain-village-dreamscape-in-vivid-colors-backiee-5K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/mountain-village-dreamscape-in-vivid-colors-backiee-5K.jpg"
+    },
+    {
+        "id": "animated-mysterious-masked-figure-with-red-eyes-backiee-4K.jpg",
+        "name": "mysterious-masked-figure-with-red-eyes-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/mysterious-masked-figure-with-red-eyes-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-mystical-enchantress-with-glowing-butterfly-backiee-4K.jpg",
+        "name": "mystical-enchantress-with-glowing-butterfly-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/mystical-enchantress-with-glowing-butterfly-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-neon-katana-samurai-under-moonlit-pink-blossoms-backiee-4K.jpg",
+        "name": "neon-katana-samurai-under-moonlit-pink-blossoms-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/neon-katana-samurai-under-moonlit-pink-blossoms-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-neon-ride-under-sakura-skies-backiee-4K.jpg",
+        "name": "neon-ride-under-sakura-skies-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/neon-ride-under-sakura-skies-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-red-samurai-amidst-swirling-smoke-backiee-4K.jpg",
+        "name": "red-samurai-amidst-swirling-smoke-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/red-samurai-amidst-swirling-smoke-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-skyline-dream-on-the-streets-of-tokyo-backiee-5K.jpg",
+        "name": "skyline-dream-on-the-streets-of-tokyo-backiee-5K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/skyline-dream-on-the-streets-of-tokyo-backiee-5K.jpg"
+    },
+    {
+        "id": "animated-smoking-young-anime-girl-backiee-4K.jpg",
+        "name": "smoking-young-anime-girl-backiee-4K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/smoking-young-anime-girl-backiee-4K.jpg"
+    },
+    {
+        "id": "animated-tattooed-warrior-in-shadows-ai-anime-artistry-backiee-5K.jpg",
+        "name": "tattooed-warrior-in-shadows-ai-anime-artistry-backiee-5K",
+        "category": "animated",
+        "src": "./assets/wallpapers/animated/tattooed-warrior-in-shadows-ai-anime-artistry-backiee-5K.jpg"
+    }
+]

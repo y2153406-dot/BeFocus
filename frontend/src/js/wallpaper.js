@@ -157,6 +157,7 @@
 
             selectedWallpaper = wallpaper;
 
+
             // Save Selected Wallpaper
 
             try {
@@ -389,15 +390,43 @@
 
 
     // ========================================
-    // 11. Load Wallpapers from Electron
+    // 11. Load Wallpapers (Electron + PWA)
     // ========================================
 
     async function loadWallpapers() {
 
         try {
 
-            wallpapers = await window.beFocus.getWallpapers();
+            // Electron Environment
 
+            if (window.beFocus?.getWallpapers) {
+
+                wallpapers = await window.beFocus.getWallpapers();
+
+            }
+
+            // Browser / PWA Environment
+
+            else {
+
+                const response = await fetch(
+                    "./assets/wallpapers.json"
+                );
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        `Failed to load wallpapers.json: ${response.status}`
+                    );
+
+                }
+
+                wallpapers = await response.json();
+
+            }
+
+
+            // Validate Wallpaper Data
 
             if (!Array.isArray(wallpapers) || wallpapers.length === 0) {
 
@@ -406,6 +435,7 @@
                 console.warn("No wallpapers found.");
 
                 return;
+
             }
 
 
