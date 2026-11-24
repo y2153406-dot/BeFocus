@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,280 @@
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
     >
 
-    <title>BeFocus</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>BeFocus - Productivity Timer</title>
 </head>
+
 <body>
-    <h1>Welcome to BeFocus</h1>
-    <p>Your productivity companion.</p>
+
+    <main class="app-container">
+
+        <!-- =================================
+             WALLPAPER SETTINGS BUTTON
+        ================================== -->
+
+        <section class="wallpaper-settings-entry">
+
+            <button id="open-wallpaper-btn" type="button">
+                ⚙ Wallpaper Settings
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             FLOATING WIDGET BUTTON
+        ================================== -->
+
+        <section class="floating-widget-entry">
+
+            <button id="open-floating-btn" type="button">
+                Floating Widget
+            </button>
+
+        </section>
+
+
+        <!-- =================================
+             DIGITAL CLOCK SECTION
+        ================================== -->
+
+        <section class="clock-container">
+
+            <h2>Digital Clock</h2>
+
+            <div id="clock-display">00:00:00</div>
+
+            <div id="clock-period"></div>
+
+            <div id="clock-date">
+                Monday, 24 November 2026
+            </div>
+
+            <div class="clock-controls">
+
+                <button id="format-12-btn" type="button">
+                    12 Hour
+                </button>
+
+                <button id="format-24-btn" type="button">
+                    24 Hour
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             STOPWATCH SECTION
+        ================================== -->
+
+        <section class="stopwatch-container">
+
+            <h1>BeFocus</h1>
+
+            <h2>Stopwatch</h2>
+
+            <div id="stopwatch-display">
+                00:00:00.00
+            </div>
+
+            <div class="stopwatch-controls">
+
+                <button id="start-btn" type="button">Start</button>
+
+                <button id="pause-btn" type="button">Pause</button>
+
+                <button id="reset-btn" type="button">Reset</button>
+
+                <button id="lap-btn" type="button">Lap</button>
+
+            </div>
+
+            <section class="lap-container">
+
+                <h3>Lap Records</h3>
+
+                <ul id="lap-list"></ul>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================
+             COUNTDOWN TIMER SECTION
+        ================================== -->
+
+        <section class="timer-container">
+
+            <h2>Countdown Timer</h2>
+
+            <div id="timer-display">
+                00:00:00
+            </div>
+
+            <div class="timer-inputs">
+
+                <input
+                    type="number"
+                    id="timer-hours"
+                    min="0"
+                    placeholder="HH"
+                    value="0"
+                >
+
+                <span>:</span>
+
+                <input
+                    type="number"
+                    id="timer-minutes"
+                    min="0"
+                    max="59"
+                    placeholder="MM"
+                    value="5"
+                >
+
+                <span>:</span>
+
+                <input
+                    type="number"
+                    id="timer-seconds"
+                    min="0"
+                    max="59"
+                    placeholder="SS"
+                    value="0"
+                >
+
+            </div>
+
+            <div class="timer-presets">
+
+                <button type="button" data-minutes="5">5 min</button>
+                <button type="button" data-minutes="10">10 min</button>
+                <button type="button" data-minutes="25">25 min</button>
+                <button type="button" data-minutes="30">30 min</button>
+                <button type="button" data-minutes="45">45 min</button>
+                <button type="button" data-minutes="60">60 min</button>
+
+            </div>
+
+            <div class="timer-controls">
+
+                <button id="timer-set-btn" type="button">Set Timer</button>
+
+                <button id="timer-start-btn" type="button">Start</button>
+
+                <button id="timer-pause-btn" type="button">Pause</button>
+
+                <button id="timer-reset-btn" type="button">Reset</button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         SEPARATE WALLPAPER SELECTION SCREEN
+    ================================== -->
+
+    <section id="wallpaper-screen" hidden>
+
+        <div class="wallpaper-page-header">
+
+            <button id="back-to-home-btn" type="button">
+                ← Back
+            </button>
+
+            <h1>Choose Your Wallpaper</h1>
+
+            <p>Select a wallpaper for your BeFocus workspace.</p>
+
+        </div>
+
+
+        <!-- Category Filters -->
+
+        <div class="wallpaper-filters">
+
+            <button
+                class="wallpaper-filter active"
+                data-category="all"
+                type="button"
+            >
+                All
+            </button>
+
+            <button
+                class="wallpaper-filter"
+                data-category="anime"
+                type="button"
+            >
+                Anime
+            </button>
+
+            <button
+                class="wallpaper-filter"
+                data-category="nature"
+                type="button"
+            >
+                Nature
+            </button>
+
+            <button
+                class="wallpaper-filter"
+                data-category="cyberpunk"
+                type="button"
+            >
+                Cyberpunk
+            </button>
+
+            <button
+                class="wallpaper-filter"
+                data-category="favorites"
+                type="button"
+            >
+                Favorites
+            </button>
+
+        </div>
+
+
+        <!-- Random Wallpaper -->
+
+        <div class="wallpaper-actions">
+
+            <button id="random-wallpaper-btn" type="button">
+                Random Wallpaper
+            </button>
+
+        </div>
+
+
+        <!-- Wallpaper Grid -->
+
+        <div
+            id="wallpaper-gallery"
+            class="wallpaper-gallery"
+        ></div>
+
+    </section>
+
+
+    <!-- =================================
+         JAVASCRIPT FILES
+    ================================== -->
+
+    <script src="./js/clock.js"></script>
+    <script src="./js/stopwatch.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/wallpaper.js"></script>
+    <script src="./js/floating-controls.js"></script>
+
 </body>
+
 </html>

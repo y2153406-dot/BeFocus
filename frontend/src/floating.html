@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self';">
+
+    <title>BeFocus Floating Widget</title>
+
+    <link rel="stylesheet" href="./css/floating.css">
+
+</head>
+
+<body>
+
+    <main class="floating-widget">
+
+        <!-- ========================================
+             1. Top Controls
+        ========================================= -->
+
+        <header class="floating-header">
+
+            <!-- Mode Selection -->
+
+            <nav class="mode-controls">
+
+                <button
+                    class="mode-btn active"
+                    id="clock-mode-btn"
+                    type="button"
+                >
+                    Clock
+                </button>
+
+                <button
+                    class="mode-btn"
+                    id="stopwatch-mode-btn"
+                    type="button"
+                >
+                    Stopwatch
+                </button>
+
+                <button
+                    class="mode-btn"
+                    id="timer-mode-btn"
+                    type="button"
+                >
+                    Timer
+                </button>
+
+            </nav>
+
+
+            <!-- Size Presets -->
+
+            <div class="size-controls" aria-label="Widget Size">
+
+                <button
+                    class="size-btn"
+                    id="size-small-btn"
+                    type="button"
+                    title="Small Size"
+                    aria-label="Small Widget Size"
+                >
+                    S
+                </button>
+
+                <button
+                    class="size-btn active"
+                    id="size-medium-btn"
+                    type="button"
+                    title="Medium Size"
+                    aria-label="Medium Widget Size"
+                >
+                    M
+                </button>
+
+                <button
+                    class="size-btn"
+                    id="size-large-btn"
+                    type="button"
+                    title="Large Size"
+                    aria-label="Large Widget Size"
+                >
+                    L
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ========================================
+             2. Time Display
+        ========================================= -->
+
+        <section class="floating-display-container">
+
+            <div id="floating-label">BEFOCUS</div>
+
+            <div id="floating-display">00:00:00</div>
+
+            <div id="floating-period"></div>
+
+        </section>
+
+
+        <!-- ========================================
+             3. Stopwatch Controls
+        ========================================= -->
+
+        <section
+            class="floating-actions"
+            id="stopwatch-actions"
+        >
+
+            <button
+                id="floating-stopwatch-start"
+                type="button"
+            >
+                Start
+            </button>
+
+            <button
+                id="floating-stopwatch-pause"
+                type="button"
+            >
+                Pause
+            </button>
+
+            <button
+                id="floating-stopwatch-reset"
+                type="button"
+            >
+                Reset
+            </button>
+
+        </section>
+
+
+        <!-- ========================================
+             4. Timer Controls
+        ========================================= -->
+
+        <section
+            class="floating-actions"
+            id="timer-actions"
+        >
+
+            <button
+                id="floating-timer-start"
+                type="button"
+            >
+                Start
+            </button>
+
+            <button
+                id="floating-timer-pause"
+                type="button"
+            >
+                Pause
+            </button>
+
+            <button
+                id="floating-timer-reset"
+                type="button"
+            >
+                Reset
+            </button>
+
+        </section>
+
+
+        <!-- ========================================
+             5. Custom Resize Handle
+        ========================================= -->
+
+        <div
+            class="resize-handle"
+            id="resize-handle"
+            role="separator"
+            aria-label="Resize Floating Widget"
+            title="Drag to resize"
+        ></div>
+
+    </main>
+
+
+    <!-- Floating Widget JavaScript -->
+
+    <script src="./js/floating.js"></script>
+
+</body>
+
+</html>

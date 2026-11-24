@@ -1,0 +1,1068 @@
+
+/* =========================================
+   BeFocus - Global Design System
+========================================= */
+
+/* 1. CSS Variables */
+
+:root {
+    --bg-primary: #09090b;
+    --bg-secondary: #18181b;
+    --bg-card: #202024;
+
+    --accent-primary: #8b5cf6;
+    --accent-hover: #7c3aed;
+
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+
+    --border-color: #303036;
+
+    --font-primary: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+
+    --wallpaper-image: none;
+}
+
+/* 2. Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   3. Body and Wallpaper Background
+========================================= */
+
+html {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 100vh;
+
+    background: transparent;
+    color: var(--text-primary);
+
+    font-family: var(--font-primary);
+}
+
+/* Wallpaper Layer */
+
+body::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 0;
+
+    background-image: var(--wallpaper-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+
+    pointer-events: none;
+}
+
+/* Keep all application content above wallpaper */
+
+.app-container {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Wallpaper Fade Animation */
+
+body.wallpaper-fade::before {
+    animation: wallpaperFadeIn 0.8s ease;
+}
+
+@keyframes wallpaperFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   4. Common Button Styling
+========================================= */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 3px;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* =========================================
+   5. Stopwatch Section
+========================================= */
+
+.stopwatch-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+}
+
+/* Stopwatch Heading */
+
+.stopwatch-container h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    color: var(--accent-primary);
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+}
+
+.stopwatch-container h2 {
+    font-size: 14px;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+
+    text-transform: uppercase;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Stopwatch Display */
+
+#stopwatch-display {
+    font-size: clamp(42px, 8vw, 76px);
+    font-weight: 600;
+
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 3px;
+
+    color: #ffffff;
+
+    padding: 30px 40px;
+    margin-bottom: 40px;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Stopwatch Controls */
+
+.stopwatch-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+}
+
+.stopwatch-controls button {
+    min-width: 105px;
+    padding: 13px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    background: rgba(24, 24, 27, 0.55);
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stopwatch-controls button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(139, 92, 246, 0.35);
+    border-color: rgba(167, 139, 250, 0.8);
+}
+
+/* Start Button */
+
+#start-btn {
+    background: rgba(139, 92, 246, 0.9);
+    border-color: #a78bfa;
+    color: #ffffff;
+}
+
+/* Pause Button */
+
+#pause-btn:hover {
+    background: rgba(39, 39, 42, 0.75);
+    border-color: #52525b;
+}
+
+/* Reset Button */
+
+#reset-btn:hover {
+    background: rgba(63, 29, 36, 0.8);
+    border-color: #ef4444;
+}
+
+/* Lap Button */
+
+#lap-btn:hover {
+    background: rgba(41, 33, 61, 0.8);
+    border-color: var(--accent-primary);
+}
+
+/* Lap Records */
+
+.lap-container {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 5px;
+}
+
+.lap-container h3 {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#lap-list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#lap-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    background: rgba(24, 24, 27, 0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    color: var(--text-primary);
+
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   6. Countdown Timer
+========================================= */
+
+.timer-container {
+    width: 100%;
+    min-height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Timer Heading */
+
+.timer-container h2 {
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    margin-bottom: 35px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Timer Display */
+
+#timer-display {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 30px 40px;
+    margin-bottom: 35px;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 7vw, 68px);
+    font-weight: 600;
+
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 3px;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Timer Inputs */
+
+.timer-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.timer-inputs input {
+    width: 90px;
+    padding: 14px 10px;
+
+    background: rgba(24, 24, 27, 0.65);
+    color: var(--text-primary);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    font-size: 20px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+
+    outline: none;
+
+    transition: border-color 0.2s ease;
+}
+
+.timer-inputs input:focus {
+    border-color: var(--accent-primary);
+}
+
+.timer-inputs span {
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Timer Presets */
+
+.timer-presets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin: 0 0 25px;
+}
+
+.timer-presets button {
+    min-width: 85px;
+    padding: 10px 16px;
+
+    background: rgba(24, 24, 27, 0.55);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 9px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.timer-presets button:hover {
+    background: rgba(139, 92, 246, 0.35);
+    border-color: rgba(167, 139, 250, 0.8);
+
+    transform: translateY(-2px);
+}
+
+.timer-presets button.active {
+    background: rgba(139, 92, 246, 0.9);
+    color: #ffffff;
+
+    border-color: #a78bfa;
+
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.2);
+}
+
+/* Timer Controls */
+
+.timer-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.timer-controls button {
+    min-width: 105px;
+    padding: 13px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+
+    background: rgba(24, 24, 27, 0.55);
+    color: #ffffff;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.timer-controls button:hover {
+    transform: translateY(-2px);
+
+    background: rgba(139, 92, 246, 0.35);
+    border-color: rgba(167, 139, 250, 0.8);
+}
+
+/* Set Timer Button */
+
+#timer-set-btn {
+    background: rgba(139, 92, 246, 0.9);
+    border-color: #a78bfa;
+    color: #ffffff;
+}
+
+/* =========================================
+   7. Digital Clock
+========================================= */
+
+.clock-container {
+    width: min(900px, 90%);
+
+    margin: 0 auto;
+    padding: 70px 20px;
+
+    text-align: center;
+}
+
+/* Clock Heading */
+
+.clock-container h2 {
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Clock Display */
+
+#clock-display {
+    font-size: clamp(48px, 8vw, 100px);
+    font-weight: 600;
+
+    letter-spacing: 4px;
+    font-variant-numeric: tabular-nums;
+
+    color: #ffffff;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    padding: 35px 20px;
+    margin: 0 auto;
+
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+/* AM / PM */
+
+#clock-period {
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    margin-top: 12px;
+}
+
+/* Clock Date */
+
+#clock-date {
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    margin-top: 15px;
+    letter-spacing: 1px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Clock Controls */
+
+.clock-controls {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.clock-controls button {
+    background: rgba(24, 24, 27, 0.55);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+
+    padding: 14px 28px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.clock-controls button:hover {
+    border-color: #8b5cf6;
+}
+
+.clock-controls button.active {
+    background: rgba(139, 92, 246, 0.9);
+    border-color: #a78bfa;
+    color: #ffffff;
+}
+
+/* =========================================
+   8. Wallpaper Gallery
+========================================= */
+
+.wallpaper-container {
+    width: min(1100px, 92%);
+    margin: 30px auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.wallpaper-container h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Category Filters */
+
+.wallpaper-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.wallpaper-filter {
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    background: rgba(24, 24, 27, 0.55);
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.wallpaper-filter:hover {
+    background: rgba(139, 92, 246, 0.35);
+    border-color: #a78bfa;
+}
+
+.wallpaper-filter.active {
+    background: rgba(139, 92, 246, 0.9);
+    border-color: #a78bfa;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+/* Random Wallpaper Button */
+
+.wallpaper-actions {
+    margin-bottom: 25px;
+}
+
+#random-wallpaper-btn {
+    padding: 11px 24px;
+    border: 1px solid rgba(167, 139, 250, 0.7);
+    border-radius: 10px;
+    background: rgba(139, 92, 246, 0.8);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#random-wallpaper-btn:hover {
+    background: #7c3aed;
+    transform: translateY(-2px);
+}
+
+/* Wallpaper Grid */
+
+.wallpaper-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* Individual Wallpaper Card */
+
+.wallpaper-card {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    background: rgba(24, 24, 27, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.wallpaper-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(167, 139, 250, 0.9);
+}
+
+.wallpaper-card.active {
+    border: 3px solid #a78bfa;
+    box-shadow: 0 0 18px rgba(139, 92, 246, 0.45);
+}
+
+/* Wallpaper Preview */
+
+.wallpaper-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.wallpaper-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Wallpaper Name Overlay */
+
+.wallpaper-card-name {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 25px 10px 12px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wallpaper-card:hover .wallpaper-card-name {
+    opacity: 1;
+}
+
+/* =========================================
+   9. Responsive Design
+========================================= */
+
+@media (max-width: 900px) {
+
+    .wallpaper-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .stopwatch-container {
+        padding: 30px 20px;
+    }
+
+    #stopwatch-display {
+        font-size: 56px;
+        padding: 25px 30px;
+    }
+
+    .lap-container {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .clock-container {
+        padding: 40px 12px;
+    }
+
+    #clock-display {
+        font-size: clamp(40px, 9vw, 60px);
+        letter-spacing: 1px;
+    }
+
+    #clock-date {
+        font-size: 16px;
+    }
+
+    .clock-controls button {
+        padding: 12px 18px;
+    }
+
+    .stopwatch-container {
+        padding: 25px 15px;
+    }
+
+    .stopwatch-container h2 {
+        margin-bottom: 30px;
+    }
+
+    #stopwatch-display {
+        width: 100%;
+
+        font-size: clamp(30px, 8vw, 46px);
+        padding: 22px 10px;
+
+        letter-spacing: 1px;
+        text-align: center;
+
+        margin-bottom: 30px;
+    }
+
+    .stopwatch-controls {
+        gap: 10px;
+    }
+
+    .stopwatch-controls button {
+        flex: 1 1 calc(50% - 10px);
+
+        min-width: 0;
+        padding: 12px 10px;
+    }
+
+    .lap-container {
+        max-width: 100%;
+    }
+
+    #lap-list li {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    #timer-display {
+        font-size: clamp(34px, 8vw, 48px);
+        padding: 22px 10px;
+    }
+
+    .timer-inputs {
+        gap: 8px;
+    }
+
+    .timer-inputs input {
+        width: 70px;
+        font-size: 18px;
+    }
+
+    .timer-controls {
+        gap: 10px;
+    }
+
+    .timer-controls button {
+        min-width: 95px;
+        padding: 12px 14px;
+    }
+
+    /* Wallpaper Gallery Mobile */
+
+    .wallpaper-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .wallpaper-filter {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+    .wallpaper-card-name {
+        opacity: 1;
+        font-size: 10px;
+        padding: 20px 8px 8px;
+    }
+}
+
+
+/* =========================================
+   10. Wallpaper Settings Entry
+========================================= */
+
+.wallpaper-settings-entry {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#open-wallpaper-btn {
+    padding: 12px 24px;
+    background: rgba(24, 24, 27, 0.65);
+    color: #ffffff;
+    border: 1px solid rgba(167, 139, 250, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#open-wallpaper-btn:hover {
+    background: rgba(139, 92, 246, 0.8);
+}
+
+/* =========================================
+   11. Separate Wallpaper Screen
+========================================= */
+
+#wallpaper-screen {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    padding: 35px;
+    background: rgba(9, 9, 11, 0.94);
+    color: #ffffff;
+}
+
+#wallpaper-screen[hidden] {
+    display: none;
+}
+
+.wallpaper-page-header {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+#back-to-home-btn {
+    display: block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    background: rgba(24,24,27,0.8);
+    color: #ffffff;
+}
+
+.wallpaper-page-header h1 {
+    margin-bottom: 10px;
+}
+
+.wallpaper-page-header p {
+    color: #a1a1aa;
+}
+
+#wallpaper-screen .wallpaper-filters,
+#wallpaper-screen .wallpaper-actions,
+#wallpaper-screen .wallpaper-gallery {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    #wallpaper-screen {
+        padding: 20px 12px;
+    }
+}
+
+
+/* ========================================
+   WALLPAPER FAVORITES
+======================================== */
+
+.wallpaper-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.wallpaper-favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    font-size: 24px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.wallpaper-favorite-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.12);
+}
+
+.wallpaper-favorite-btn[aria-pressed="true"] {
+    color: #ff4d6d;
+}
+
+
+/* ========================================
+   FLOATING WIDGET BUTTON
+======================================== */
+
+.floating-widget-entry {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#open-floating-btn {
+    position: relative;
+
+    padding: 13px 28px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6,
+        #a855f7
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(99, 102, 241, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+#open-floating-btn:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.12);
+
+    box-shadow:
+        0 9px 25px rgba(139, 92, 246, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+#open-floating-btn:active {
+    transform: translateY(0) scale(0.97);
+}
+
+#open-floating-btn:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 4px;
+}
+
