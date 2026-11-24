@@ -1,0 +1,51 @@
+
+name: Deploy BeFocus PWA
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "frontend/src/**"
+      - ".github/workflows/deploy-pwa.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare PWA files
+        run: |
+          mkdir -p public
+          cp -R frontend/src/. public/
+          touch public/.nojekyll
+
+      - name: Upload PWA artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy BeFocus PWA
+        id: deployment
+        uses: actions/deploy-pages@v4
